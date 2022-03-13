@@ -4,6 +4,8 @@
     margin: 10px;
     background-color: greenyellow;
     max-width: 270px;
+    padding: 10px
+
 }
 
 .avatar {
@@ -12,26 +14,29 @@
     border-radius: 50%;
     display: block;
     object-fit: cover;
+    left: 10px;
+    padding: 10px
 }
 
 
 .content {
     padding:20px;
     border-radius: 5px 5px 5px 0;
-    background-color: rgba(255,255,255,0.3)
+    background-color: darkslategray;
 }
 
-.angle {
-    position:absolute;
-    width: 15px;
-    hight: 15px;
-    background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 15px, rgba(255,255,255,0.3) 0);
-}
+/*.angle {*/
+/*    position:absolute;*/
+/*    width: 15px;*/
+/*    hight: 15px;*/
+/*    background: radial-gradient(circle at 0 0, rgba(0,0,0,0) 15px, rgba(255,255,255,0.3) 0);*/
+/*}*/
 
 .text {
     min-width: 150px;
-    max-width: 100px;
+    max-width: 300px;
     word-wrap:break-word;
+    color: azure;
 }
 
 .name {
@@ -44,15 +49,17 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    color:darkseagreen;
 }
 
-/*.time:after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    bottom: 0;*/
-/*    right: 100%;*/
-/*    display: block;*/
-/*    width: 40px;*/
-/*    height: 24px;*/
-/*    background: radial-gradient(64px at top left, transparent 50%, darkslategray 51%) no-repeat right bottom;*/
-/*}*/
+.time:after {
+    content: "";
+    position: absolute;
+    bottom:0;
+    right: 108%;
+    display: block;
+    width: 40px;
+    height: 24px;
+    top: 18px;
+    background: radial-gradient(64px at top left, transparent 50%, darkslategray 51%) no-repeat right bottom;
+}
