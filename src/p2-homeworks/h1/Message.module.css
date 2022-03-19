@@ -60,6 +60,7 @@
     display: block;
     width: 40px;
     height: 24px;
-    top: 18px;
+    top: 17px;
     background: radial-gradient(64px at top left, transparent 50%, darkslategray 51%) no-repeat right bottom;
+
 }
