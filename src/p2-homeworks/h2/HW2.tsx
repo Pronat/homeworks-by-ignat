@@ -34,10 +34,9 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     else {}
     return []
 }
-//     else return affairs.filter(el=>el.priority === filter)
-// }
-export const deleteAffair = (affairs: Array<AffairType>, _id: number): any => { // need to fix any
-    return // need to fix
+
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => {
+    return affairs.filter(el=>el._id !== _id)
 }
 
 function HW2() {
