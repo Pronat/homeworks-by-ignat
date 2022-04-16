@@ -1,3 +1,15 @@
 .someClass {
 
 }
+
+.buttonWrapper button {
+    margin: 10px;
+    width: 60px;
+    background: darkgreen;
+    color: lightgreen;
+}
+
+.mapAff {
+    color:blue;
+}
+

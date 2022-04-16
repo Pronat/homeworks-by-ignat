@@ -20,7 +20,7 @@
     border: lightgreen;
 }
 
-errorInput {
+.errorInput {
     margin: 10px;
     background: darkgreen;
     color: lightgreen;
@@ -29,8 +29,26 @@ errorInput {
 }
 
 .button {
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
     width: 60px;
     background: darkgreen;
     color: lightgreen;
+}
+
+.button:focus {
+    outline: lightgreen;
+}
+
+.button:active {
+    background: blue;
+}
+
+button:disabled {
+    color: darkgreen;
+}
+
+.count {
+    margin: 10px;
+    color: blue;
 }
