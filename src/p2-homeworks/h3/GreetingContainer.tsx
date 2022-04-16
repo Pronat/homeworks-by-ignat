@@ -30,13 +30,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const addUser = () => {
         alert(`Hello ${name}!`) // need to fix
             addUserCallback(name)
+            setName("")
     }
 
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => {
         setError('')
-        if (e.charCode === 13) {
+        if (e.charCode === 13 && name) {
             addUser()
-            setName('')
         }
     }
 
