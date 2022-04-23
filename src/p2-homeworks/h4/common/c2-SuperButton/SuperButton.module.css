@@ -49,6 +49,7 @@
 .button:hover::after {
     animation: blink 0.35s ease;
 }
+
 .button:hover::before {
     display: block;
     content: "";
