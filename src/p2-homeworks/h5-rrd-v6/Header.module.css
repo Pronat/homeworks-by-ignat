@@ -1,3 +1,25 @@
-.color{
-    color:cornflowerblue;
+.link {
+    text-decoration: none;
+    color: darkgreen;
+    margin: 10px
+}
+
+.link:hover {
+    color: indianred;
+}
+
+.active {
+    color:cyan;
+}
+
+.header {
+    display: flex;
+    width: 300px;
+    transition-duration: 500ms;
+    transform: translateX(-220px);
+}
+
+.header:hover {
+    transition-duration: 500ms;
+    transform: translate(0);
 }

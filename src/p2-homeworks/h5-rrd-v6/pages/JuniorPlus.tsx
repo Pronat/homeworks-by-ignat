@@ -3,6 +3,7 @@ import React from 'react'
 function JuniorPlus() {
     return (
         <div>
+            JuniorPlus
             {/*<HW10/>*/}
             {/*<HW11/>*/}
             {/*<HW12/>*/}

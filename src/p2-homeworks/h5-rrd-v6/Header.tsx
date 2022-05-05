@@ -7,9 +7,9 @@ function Header() {
     return (
         <div>
             {/*// add NavLinks*/}
-            <NavLink to={PATH.PRE_JUNIOR} className={s.color} activeClassName={s.active}>pre-junior</NavLink>---
-            <NavLink to={PATH.JUNIOR}>junior</NavLink>---
-            <NavLink to={PATH.JUNIOR_PLUS}>junior+</NavLink>---
+            <NavLink to={PATH.PRE_JUNIOR} className={s.link}>pre-junior</NavLink>---
+            <NavLink to={PATH.JUNIOR} className={s.link}>junior</NavLink>---
+            <NavLink to={PATH.JUNIOR_PLUS} className={s.link}>junior+</NavLink>---
         </div>
     )
 }

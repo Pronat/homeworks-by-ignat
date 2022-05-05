@@ -31,9 +31,9 @@ function Pages() {
 
                 {/*он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
                 <Route path={'/*'} element={<Error404/>}/>
-                <Route path={'/pre-junior'} element={<div>pre-junior</div>}/>
-                <Route path={'/junior'} element={<div>junior</div>}/>
-                <Route path={'/junior+'} element={<div>junior+</div>}/>
+                {/*<Route path={'/pre-junior'} element={<div>pre-junior</div>}/>*/}
+                {/*<Route path={'/junior'} element={<div>junior</div>}/>*/}
+                {/*<Route path={'/juniorPlus'} element={<div>junior+</div>}/>*/}
 
             </Routes>
         </div>
