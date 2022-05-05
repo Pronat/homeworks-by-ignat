@@ -18,10 +18,13 @@ function Pages() {
                 <Route path={'/'} element={<Navigate to={PATH.PRE_JUNIOR}/>}/>
 
                 <Route path={PATH.PRE_JUNIOR} element={<PreJunior/>}/>
-                // add routes
+                {/*// add routes*/}
 
-                он отрисуется если пользователь захочет попасть на несуществующую страницу
+                {/*он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
                 <Route path={'/*'} element={<Error404/>}/>
+                <Route path={'/pre-junior'} element={<div>pre-junior</div>}/>
+                <Route path={'/junior'} element={<div>junior</div>}/>
+                <Route path={'/junior+'} element={<div>junior+</div>}/>
 
             </Routes>
         </div>
