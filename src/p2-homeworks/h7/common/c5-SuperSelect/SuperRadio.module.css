@@ -1,19 +1,18 @@
 .radio {
     color: darkseagreen;
     background-color: darkgreen;
-
 }
 
-.option {
-    color: darkgreen;
-    background-color: darkseagreen;
-}
+/*.option {*/
+/*    color: darkgreen;*/
+/*    background-color: darkseagreen;*/
+/*}*/
 
-.option:checked {
-    color: darkgreen;
-    background-color: darkseagreen;
-}
+/*.option:checked {*/
+/*    color: darkgreen;*/
+/*    background-color: darkseagreen;*/
+/*}*/
 
-.option:hover {
-    background: red;
-}
+/*.option:hover {*/
+/*    background: red;*/
+/*}*/
