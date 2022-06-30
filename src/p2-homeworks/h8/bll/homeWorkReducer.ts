@@ -5,9 +5,15 @@ type StateType = Array<UserType>
 type ActionType = SortType | CheckType
 type SortType = {
     type: 'sort'
+    payload: {
+
+    }
 }
 type CheckType = {
     type: 'check'
+    payload: {
+
+    }
 }
 
 
