@@ -9,7 +9,7 @@ type SortType = {
 }
 type CheckType = {
     type: 'check'
-    payload: string
+    payload: number
 }
 
 
@@ -18,7 +18,12 @@ export const homeWorkReducer = (state: StateType, action: ActionType): StateType
         case 'sort': {
             // need to fix
             const newState = [...state]
-            newState.sort((a, b) => a.name > b.name ? 1 : -1)
+            if (action.payload === 'up') {
+                newState.sort((a, b) => a.name > b.name ? 1 : -1)
+            }
+            if (action.payload === 'down') {
+                newState.sort((a, b) => b.name > a.name ? 1 : -1)
+            }
             return newState
         }
         case 'check': {
