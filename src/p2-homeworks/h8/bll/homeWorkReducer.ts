@@ -2,8 +2,8 @@ import {UserType} from "../HW8";
 
 type StateType = Array<UserType>
 
-type ActionType = SortType | CheckType
-type SortType = {
+type ActionType = SortUpType | CheckType
+type SortUpType = {
     type: 'sort'
     payload: {
 
@@ -21,6 +21,7 @@ export const homeWorkReducer = (state: StateType, action: ActionType): StateType
     switch (action.type) {
         case 'sort': {
             // need to fix
+            // return state.sort((a, b) => a.name > b.name ? 1 : -1)
             return state
         }
         case 'check': {
