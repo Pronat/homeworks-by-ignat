@@ -25,8 +25,9 @@ export const homeWorkReducer = (state: StateType, action: ActionType): StateType
         }
         case 'check': {
             // need to fix
-            return state
+            return state.sort((a, b) => a.age > b.age ? 1 : -1)
         }
-        default: return state
+        default:
+            throw new Error('Error: type')
     }
 }

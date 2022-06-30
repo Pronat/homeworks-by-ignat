@@ -23,13 +23,13 @@ function HW8() {
     // need to fix any
     const finalPeople = people.map((p: UserType) => (
         <div key={p._id}>
-            some name, age
+            {p.name} {p.age}
         </div>
     ))
 
     const sortUp = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
-    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
-    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'up'}))
+    const sortDown = () => setPeople(homeWorkReducer(initialPeople, {type: 'sort', payload: 'down'}))
+    const check18 = () => setPeople(homeWorkReducer(initialPeople, {type: 'check', payload: 18}))
 
     return (
         <div>
