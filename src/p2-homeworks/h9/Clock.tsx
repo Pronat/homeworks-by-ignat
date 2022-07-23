@@ -7,6 +7,7 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
+        clearInterval(timerId)
         // stop
     }
     const start = () => {
@@ -19,6 +20,7 @@ function Clock() {
 
     const onMouseEnter = () => {
         // show
+
     }
     const onMouseLeave = () => {
         // close
