@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
-import {clearInterval} from "timers";
 
 function Clock() {
     const [timerId, setTimerId] = useState<number>(0)
@@ -8,11 +7,11 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const stop = () => {
-        clearInterval()
+        clearInterval(timerId)
     }
     const start = () => {
         stop()
-        const id: number = window.setInterval(() => {
+        const id: number = +setInterval(() => {
             // setDate
             setDate(new Date())
         }, 1000)
