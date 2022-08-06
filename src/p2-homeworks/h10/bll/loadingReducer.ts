@@ -1,5 +1,5 @@
 const initState = {
-    loading: true
+    // loading: true
 }
 type  ActionType = ReturnType<typeof loadingAC>
 
