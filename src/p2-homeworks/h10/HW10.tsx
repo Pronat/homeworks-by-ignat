@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "./bll/store";
 
 function HW10() {
-    let loading = useSelector<AppStoreType, >(state => state.loading)
+    let loading = useSelector((state:AppStoreType) => state.loading)
     let dispatch = useDispatch()
     // useSelector, useDispatch
 
