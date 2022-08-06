@@ -9,13 +9,15 @@ function HW10() {
     let dispatch = useDispatch()
     // useSelector, useDispatch
 
-    const loading = false
 
     const setLoading = () => {
         // dispatch
-        dispatch(loadingAC(isLoading: true))
+        dispatch(loadingAC(true))
         // setTimeout
-        console.log('loading...')
+        setTimeout(() => {
+            dispatch(loadingAC(false))
+        }, 2000)
+        // console.log('loading...')
     };
 
     return (
@@ -24,7 +26,7 @@ function HW10() {
             homeworks 10
 
             {/*should work (должно работать)*/}
-            {loading
+            {isLoading
                 ? (
                     <div>крутилка...</div>
                 ) : (
