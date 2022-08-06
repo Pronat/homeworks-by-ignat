@@ -1,10 +1,11 @@
 const initState = {
-
+    loading: true
 }
+type  ActionType = ReturnType<typeof loadingAC>
 
-export const loadingReducer = (state = initState, action: any): any => { // fix any
+export const loadingReducer = (state = initState, action: ActionType): any => { // fix any
     switch (action.type) {
-        case '': {
+        case 'TRUE-LOADING': {
             return state
         }
         default: return state
