@@ -1,4 +1,5 @@
 import React from 'react'
+import {Box, Slider} from "@material-ui/core";
 
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: [number, number]) => void
@@ -16,13 +17,15 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     return (
         <>
-            <input
-            type={'range'}
-            // onChange={onChangeCallback}
-            // className={finalRangeClassName}
-            //
-            // {...restProps}
-        />
+            <Box width={300}>
+                <Slider
+
+                    defaultValue={70}
+                    aria-label="Small"
+                    valueLabelDisplay="auto"
+                />
+                <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+            </Box>
         </>
     )
 }
