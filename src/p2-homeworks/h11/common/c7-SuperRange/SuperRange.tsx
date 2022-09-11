@@ -17,7 +17,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
         className,
-
+        setValue1,
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -28,6 +28,11 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     }
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
+
+    // const setValue1Handler = (e: string) => {
+    //     setValue1(e.currentTarget.value)
+    // }
+
 
     return (
         <>
@@ -43,7 +48,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                     defaultValue={70}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    onChange={()=>{setValue1()}}
+                    // onChange={setValue1Handler}
                 />
             </Box>
         </>

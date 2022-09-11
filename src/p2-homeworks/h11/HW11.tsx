@@ -26,7 +26,7 @@ function HW11() {
             <div>
                 <span>{value1}</span>
                 <SuperDoubleRange
-
+                    setValue1={setValue1}
                     // сделать так чтоб value1 и value2 изменялось
                 />
                 <span>{value2}</span>
