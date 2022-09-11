@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction} from 'react'
+import React, {ChangeEvent, Dispatch, SetStateAction} from 'react'
 import {Box, Slider} from "@material-ui/core";
 
 type SuperDoubleRangePropsType = {
@@ -17,9 +17,9 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 ) => {
     // сделать самому, можно подключать библиотеки
 
-    const setValue1Handler = (e: number) => {
-            setValue1(e.currentTarget.value)
-        }
+    // const setValue1Handler = (e: ChangeEvent<{}>, value: number) => {
+    //         setValue1(+e.currentTarget.value)
+    //     }
 
 
     return (
@@ -29,7 +29,8 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                     defaultValue={70}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    onChange={setValue1Handler}
+                    onChange={(e: ChangeEvent<{}>, value: number | number[]) => {
+                        setValue1(34)}}
                 />
             </Box>
         </>

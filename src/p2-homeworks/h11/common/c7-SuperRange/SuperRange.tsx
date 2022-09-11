@@ -29,9 +29,9 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
-    // const setValue1Handler = (e: string) => {
-    //     setValue1(e.currentTarget.value)
-    // }
+    const setValue1Handler = (e: ChangeEvent<{}>, value: number | number[]) => {
+        setValue1(+e.currentTarget)
+    }
 
 
     return (
@@ -48,7 +48,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
                     defaultValue={70}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    // onChange={setValue1Handler}
+                    onChange={setValue1Handler}
                 />
             </Box>
         </>
