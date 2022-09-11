@@ -16,9 +16,16 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
     return (
         <>
-            DoubleRange
+            <input
+            type={'range'}
+            // onChange={onChangeCallback}
+            // className={finalRangeClassName}
+            //
+            // {...restProps}
+        />
         </>
     )
 }
 
 export default SuperDoubleRange
+//

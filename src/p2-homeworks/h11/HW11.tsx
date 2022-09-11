@@ -17,6 +17,7 @@ function HW11() {
                 <SuperRange
                     // сделать так чтоб value1 изменялось
                 />
+                <span>{value2}</span>
             </div>
 
             <div>
