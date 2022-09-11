@@ -1,4 +1,4 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes} from 'react'
+import React, {ChangeEvent, DetailedHTMLProps, Dispatch, InputHTMLAttributes, SetStateAction} from 'react'
 import s from './SuperRange.module.css'
 import {Box, Slider} from "@material-ui/core";
 
@@ -9,6 +9,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
+    setValue1: Dispatch<SetStateAction<number>>
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -30,19 +31,19 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
     return (
         <>
-            {/*<input*/}
-            {/*    type={'range'}*/}
-            {/*    onChange={onChangeCallback}*/}
-            {/*    className={finalRangeClassName}*/}
+            <input
+                type={'range'}
+                onChange={onChangeCallback}
+                className={finalRangeClassName}
 
-            {/*    {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)*/}
-            {/*/>*/}
+                {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
+            />
             <Box width={300}>
                 <Slider
                     defaultValue={70}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    onChange={onChangeCallback}
+                    onChange={()=>{setValue1()}}
                 />
             </Box>
         </>
