@@ -9,7 +9,6 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
-
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -46,15 +45,15 @@ const SuperRange: React.FC<SuperRangePropsType> = (
 
                 {...restProps} // отдаём инпуту остальные пропсы если они есть (value например там внутри)
             />
-            <Box width={300}>
-                <Slider
-                    value={Number(value)}
-                    //defaultValue={70}
-                    aria-label="Small"
-                    valueLabelDisplay="auto"
-                    onChange={setValue1Handler}
-                />
-            </Box>
+            {/*<Box width={300}>*/}
+            {/*    <Slider*/}
+            {/*        value={Number(value)}*/}
+            {/*        //defaultValue={70}*/}
+            {/*        aria-label="Small"*/}
+            {/*        valueLabelDisplay="auto"*/}
+            {/*        onChange={setValue1Handler}*/}
+            {/*    />*/}
+            {/*</Box>*/}
         </>
     )
 }

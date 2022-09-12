@@ -4,13 +4,11 @@ import {Box, Slider} from "@material-ui/core";
 type SuperDoubleRangePropsType = {
     onChangeRange?: (value: [number, number]) => void
     value?: [number, number]
-    setValue1: Dispatch<SetStateAction<number>>
     // min, max, step, disable, ...
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
-        setValue1,
         onChangeRange, value,
         // min, max, step, disable, ...
     }
@@ -30,8 +28,8 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                     value={value}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    onChange={(e: ChangeEvent<{}>, value: number | number[]) => {
-                        setValue1(34)}}
+                    // onChange={(e: ChangeEvent<{}>, value: number | number[]) => {
+                    //     setValue1(34)}}
                     // onChangeRange=(проверка number[] выше)
                 />
             </Box>
