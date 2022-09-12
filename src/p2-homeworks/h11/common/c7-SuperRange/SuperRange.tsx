@@ -9,7 +9,7 @@ type DefaultInputPropsType = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElem
 // (чтоб не писать value: string, onChange: ...; они уже все описаны в DefaultInputPropsType)
 type SuperRangePropsType = DefaultInputPropsType & { // и + ещё пропсы которых нет в стандартном инпуте
     onChangeRange?: (value: number) => void
-    setValue1: Dispatch<SetStateAction<number>>
+
 };
 
 const SuperRange: React.FC<SuperRangePropsType> = (
@@ -17,7 +17,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         type, // достаём и игнорируем чтоб нельзя было задать другой тип инпута
         onChange, onChangeRange,
         className,
-        setValue1,
+        value,
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
@@ -30,7 +30,9 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
     const setValue1Handler = (e: ChangeEvent<{}>, value: number | number[]) => {
-        setValue1(e.currentTarget.value)
+
+       // setValue1(e.currentTarget.value)
+        // setValue1(25)
     }
 
 
@@ -38,6 +40,7 @@ const SuperRange: React.FC<SuperRangePropsType> = (
         <>
             <input
                 type={'range'}
+                value={value}
                 onChange={onChangeCallback}
                 className={finalRangeClassName}
 
@@ -45,7 +48,8 @@ const SuperRange: React.FC<SuperRangePropsType> = (
             />
             <Box width={300}>
                 <Slider
-                    defaultValue={70}
+                    value={Number(value)}
+                    //defaultValue={70}
                     aria-label="Small"
                     valueLabelDisplay="auto"
                     onChange={setValue1Handler}

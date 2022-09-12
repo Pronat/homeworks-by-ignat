@@ -21,16 +21,18 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     //         setValue1(+e.currentTarget.value)
     //     }
 
-
+    //Array.isArray(value)
     return (
         <>
             <Box width={300}>
                 <Slider
-                    defaultValue={70}
+                    //defaultValue={70}
+                    value={value}
                     aria-label="Small"
                     valueLabelDisplay="auto"
                     onChange={(e: ChangeEvent<{}>, value: number | number[]) => {
                         setValue1(34)}}
+                    // onChangeRange=(проверка number[] выше)
                 />
             </Box>
         </>
