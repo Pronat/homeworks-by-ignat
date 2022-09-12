@@ -15,11 +15,15 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 ) => {
     // сделать самому, можно подключать библиотеки
 
-    // const setValue1Handler = (e: ChangeEvent<{}>, value: number) => {
-    //         setValue1(+e.currentTarget.value)
-    //     }
 
     //Array.isArray(value)
+    const onChangeCallback = () => {
+        if (Array.isArray(value)) {
+            setValue1(value[0])
+            setValue2(value[1])
+        }
+    }
+
     return (
         <>
             <Box width={300}>
@@ -28,8 +32,7 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
                     value={value}
                     aria-label="Small"
                     valueLabelDisplay="auto"
-                    // onChange={(e: ChangeEvent<{}>, value: number | number[]) => {
-                    //     setValue1(34)}}
+                    onChange={onChangeCallback}
                     // onChangeRange=(проверка number[] выше)
                 />
             </Box>
