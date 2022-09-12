@@ -29,7 +29,6 @@ const SuperRange: React.FC<SuperRangePropsType> = (
     const finalRangeClassName = `${s.range} ${className ? className : ''}`
 
     const setValue1Handler = (e: ChangeEvent<{}>, value: number | number[]) => {
-
        // setValue1(e.currentTarget.value)
         // setValue1(25)
     }

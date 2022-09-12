@@ -2,13 +2,18 @@ import React, {ChangeEvent, Dispatch, SetStateAction} from 'react'
 import {Box, Slider} from "@material-ui/core";
 
 type SuperDoubleRangePropsType = {
+    // onChangeRange?: (value: [number, number]) => void
     onChangeRange?: (value: [number, number]) => void
     value?: [number, number]
+    setValue1: Dispatch<SetStateAction<number>>
+    setValue2: Dispatch<SetStateAction<number>>
     // min, max, step, disable, ...
 }
 
 const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     {
+        setValue1,
+        setValue2,
         onChangeRange, value,
         // min, max, step, disable, ...
     }
@@ -17,10 +22,9 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
 
 
     //Array.isArray(value)
-    const onChangeCallback = () => {
+    const onChangeCallback = (e: ChangeEvent<{}>, value: number | number[]) => {
         if (Array.isArray(value)) {
-            setValue1(value[0])
-            setValue2(value[1])
+            onChangeRange && onChangeRange(+e.currentTarget.value)
         }
     }
 
