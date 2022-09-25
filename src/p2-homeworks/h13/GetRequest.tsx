@@ -1,9 +1,15 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
 
-const instance = axios.create({
-    baseURL: "https://neko-cafe-back.herokuapp.com/auth/test",
-})
+export type RootObject = {
+    errorText: string;
+    info: string;
+    yourBody: {
+        success: boolean;
+    };
+    yourQuery: {};
+}
+
 
 export const GetRequest = () => {
     const [state, setState] = useState<any>(null)
@@ -17,13 +23,14 @@ export const GetRequest = () => {
     }
 
     return <div>
-        {JSON.stringify(state)}
         <div>
             <input type={"checkbox"} checked={value} onChange={(e) => setValue(e.currentTarget.checked)}/>
-            <button onClick={getFromButton}>button</button>
+            <button onClick={getFromButton}>axios.post</button>
+            <div>{state}</div>
+
+
         </div>
 
     </div>
-
-
 }
+
