@@ -24,12 +24,14 @@ const SuperDoubleRange: React.FC<SuperDoubleRangePropsType> = (
     //Array.isArray(value)
     const onChangeCallback = (e: ChangeEvent<{}>, value: number | number[]) => {
         if (Array.isArray(value)) {
-            onChangeRange && onChangeRange(+e.currentTarget.value)
+            // onChangeRange && onChangeRange(+e.currentTarget.value)
         }
     }
 
     return (
         <>
+
+
             <Box width={300}>
                 <Slider
                     //defaultValue={70}
