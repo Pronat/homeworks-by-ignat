@@ -1,5 +1,5 @@
 import axios from "axios";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const Request = () => {
     const instance = axios.create({
@@ -8,12 +8,18 @@ export const Request = () => {
     return (
         <>
             <input type={"checkbox"}/>
-            <button>button</button>
+            <button onClick={GetRequest}>button</button>
         </>
     )
 }
 
 export const GetRequest = () => {
     const [state, setState] = useState<any>(null)
-
+    useEffect( () => {
+      let promise = axios.get("https://neko-cafe-back.herokuapp.com/auth/test")
+        promise.then( (res) => {
+            setState(res.data)
+            alert(state)
+        })
+    })
 }
