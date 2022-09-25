@@ -1,6 +1,7 @@
 
-import {Request} from "./Request";
+
 import HW12 from "../h12/HW12";
+import {GetRequest} from "./GetRequest";
 
 function HW13() {
 
@@ -9,7 +10,7 @@ function HW13() {
             <hr/>
             homeworks 13
             <div>
-                <Request/>
+                <GetRequest />
             </div>
 
         </div>
