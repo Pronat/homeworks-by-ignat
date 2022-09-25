@@ -14,23 +14,23 @@ export type RootObject = {
 export const GetRequest = () => {
     const [state, setState] = useState<any>(null)
     const [value, setValue] = useState<boolean>(false)
-
+    const [error, setError] = useState<string>('')
     const getFromButton = () => {
-        let promise = axios.post("https://neko-cafe-back.herokuapp.com/auth/test", {success: value})
+        let promise = axios.post<RootObject>("https://neko-cafe-back.herokuapp.com/auth/test", {success: value})
         promise.then((res) => {
             setState(res.data)
+            setError(res.data.errorText)
         })
     }
 
-    return <div>
+    return (
         <div>
-            <input type={"checkbox"} checked={value} onChange={(e) => setValue(e.currentTarget.checked)}/>
-            <button onClick={getFromButton}>axios.post</button>
-            <div>{state}</div>
-
-
+            <div>
+                <input type={"checkbox"} checked={value} onChange={(e) => setValue(e.currentTarget.checked)}/>
+                <button onClick={getFromButton}>axios.post</button>
+            </div>
+            <div>{error}</div>
         </div>
-
-    </div>
+    )
 }
 
