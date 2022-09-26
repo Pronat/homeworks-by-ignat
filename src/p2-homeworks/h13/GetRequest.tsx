@@ -19,11 +19,12 @@ export const GetRequest = () => {
         axios.post<RootObject>("https://neko-cafe-back.herokuapp.com/auth/test", {success: value})
             .then((res) => {
                 setState(res.data)
-                console.log(state)
+                console.log(res.data.errorText)
+                setError(res.data.errorText)
             })
             .catch((error) => {
-                setError(error)
-                console.log(error)
+                setError(error.message)
+                console.log(error.message)
             })
     }
 
@@ -33,6 +34,7 @@ export const GetRequest = () => {
                 <input type={"checkbox"} checked={value} onChange={(e) => setValue(e.currentTarget.checked)}/>
                 <button onClick={getFromButton}>axios.post</button>
             </div>
+            {error}
         </div>
     )
 }
